@@ -1,0 +1,10 @@
+<div data-controller='time'>
+  <h1>Display Time</h1>
+  <%= time_zone_select "time_zone", "time_zone",
+    TZInfo::Timezone.all.sort,
+    { include_blank: false },
+    { data: { target: 'time.time_zone', action: 'change->time#changed_zone' }} %>
+  <h2 data-target='time.display_time'>Time to display</h2>
+  <h3 data-target='time.display_time_zone'>Time Zone to display</h3>
+  <button data-action='time#set_previous_time_zone'>Previous Time Zone</button>
+</div>

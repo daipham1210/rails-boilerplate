@@ -13,6 +13,7 @@ window.Rails = Rails
 
 import 'bootstrap'
 import 'data-confirm-modal'
+import 'controllers'
 
 $(document).on("turbolinks:load", () => {
   $('[data-toggle="tooltip"]').tooltip()

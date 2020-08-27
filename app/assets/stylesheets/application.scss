@@ -16,7 +16,39 @@
   }
 }
 
+$cl-primary: #425ACD;
+$cl-error: #a94442;
+
 // Masquerade alert shouldn't have a bottom margin
 body > .alert {
   margin-bottom: 0;
+}
+
+a {
+  color: $cl-primary;
+  &:hover {
+    color: $cl-primary;
+  }
+}
+
+.form-control:focus {
+  background-color: #FFFFFF;
+  border-color: $cl-primary;
+  box-shadow: none;
+}
+
+.btn-primary {
+  @include button-variant($cl-primary, darken($cl-primary, 7.5%), darken($cl-primary, 10%), lighten($cl-primary,5%), lighten($cl-primary, 10%), darken($cl-primary,30%));
+}
+
+.field_with_errors {
+  input {
+    border-color: $cl-error;
+  }
+  label {
+    color: $cl-error;
+  }
+  div {
+    color: $cl-error;
+  }
 }
